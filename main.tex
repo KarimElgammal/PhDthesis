@@ -1,0 +1,113 @@
+\documentclass[g5paper,11pt]{kth-mag}  %g5paper a4paper %showtrims
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[swedish,english]{babel}
+\usepackage{nada-ex}
+\usepackage{amsmath}
+\usepackage{layouts}
+\usepackage{amssymb}	% Math symbols such as \mathbb
+\usepackage{amsthm} % Theorem Formatting
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage{cite}
+\usepackage{attachfile}
+\usepackage[normalem]{ulem}
+\usepackage{caption}
+\usepackage{subcaption}   % usage of subfigures
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{doi}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{array}
+\input{header.tex}
+%end for equations
+%\usepackage[backref=true,backend=biber,natbib=true,hyperref=true]{biblatex}
+
+\hypersetup{
+    colorlinks=true, 
+    breaklinks=true,
+    allcolors=blue
+}
+
+% \hypersetup{
+%     colorlinks=true, 
+%     linkcolor=blue,  
+%     citecolor=blue,  
+%     filecolor=blue,  
+%     anchorcolor=blue,
+%     breaklinks=true,
+%     urlcolor=blue,
+%     allcolors=blue
+% }
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage{afterpage}
+\newcommand\blankpage{
+    \clearpage
+    \newpage
+    \mbox{~}
+    \clearpage
+    \newpage}
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\newcommand{\karim}[1]{\textcolor{green}{$<${#1}$>$}}
+\newcommand{\anna}[1]{\textcolor{red}{$<${#1}$>$}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand\textline[3][t]{%
+  \par\smallskip\noindent\parbox[#1]{.5\textwidth}{\raggedright{}#2}%
+  \parbox[#1]{.5\textwidth}{\raggedleft{#3}}\par\smallskip%
+}
+
+
+
+
+
+\makeatother
+ \title{Density Functional Theory Calculations for Graphene-based Gas Sensor Technology}
+ \author{Karim Elgammal}
+ \date{\today}
+ \blurb{PhD Thesis in Physics \\ Stockholm, Sweden 2018}
+%  \trita{TRITA ICT 2016:02 \\ ISBN 978-91-7595-817-0}
+ \begin{document}
+ \frontmatter
+ \maketitle
+\input{flush}
+ \input{chapters/abstract}
+ \blankpage
+ %\input{chapters/abs-sv}
+ \input{chapters/abs-sv-AD}
+ \input{dedication}
+ \input{chapters/ack}
+\input{chapters/papers}
+\selectlanguage{english}
+ \mainmatter
+ \tableofcontents
+\input{chapters/chapterIntro}
+\input{chapters/chapterGraphene}
+\input{chapters/chapterGrapheneSensors}
+\input{chapters/chapterDFT}
+\input{chapters/chapterCalcDetails}
+\input{chapters/chapterResults}
+\input{chapters/chapterConclusion}
+
+
+
+%%%
+ \bibliographystyle{apsrev4-1} %unsrt %apsrev4-1
+ %\newpage
+ 
+ \bibliography{thesisRefs}{}
+%%%
+
+\end{document}
+\endinput
